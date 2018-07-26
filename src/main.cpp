@@ -105,7 +105,7 @@ struct Cleaner : Extension {
             }
 
             if (should_clean) {
-                logger.debug(u8"正在清理 " + data_dir + " 目录……");
+                logger.info(u8"正在清理 " + data_dir + " 目录……");
                 call_action_("clean_data_dir", {{"data_dir", data_dir}});
             }
         }
@@ -115,7 +115,7 @@ struct Cleaner : Extension {
             try {
                 logger.debug(u8"正在检查酷 Q 日志文件……");
                 if (fs::file_size(s2ws(coolq_log_file)) > coolq_log_max_size_) {
-                    logger.debug(u8"正在清理酷 Q 日志文件，此操作需要重启酷 Q，即将重启……");
+                    logger.info(u8"正在清理酷 Q 日志文件，此操作需要重启酷 Q，即将重启……");
                     call_action_("set_restart", {{"clean_log", true}});
                 }
             } catch (fs::filesystem_error &) {
