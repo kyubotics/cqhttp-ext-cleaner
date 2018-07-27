@@ -16,8 +16,8 @@ struct Cleaner : Extension {
     Info info() const override {
         static Info i;
         i.name = u8"垃圾清理";
-        i.version = "0.0.1";
-        i.build_number = 1;
+        i.version = "0.0.2";
+        i.build_number = 2;
         i.description = u8"提供后台自动清理垃圾功能。";
         return i;
     }
