@@ -7,7 +7,7 @@
 
 ## 使用方式
 
-将 [Release](https://github.com/richardchien/cqhttp-ext-cleaner/releases) 中下载的 `Cleaner.dll` 放到酷 Q 的 `app\io.github.richardchien.coolqhttpapi\extensions` 目录下（没有则创建），然后配置文件中添加 `cleaner.enable = true`，重启插件即可。
+将 [Release](https://github.com/richardchien/cqhttp-ext-cleaner/releases) 中下载的 `Cleaner.dll` 放到酷 Q 的 `data\app\io.github.richardchien.coolqhttpapi\extensions` 目录下（没有则创建），然后配置文件中添加 `cleaner.enable = true`，重启插件即可。
 
 ## 配置
 
