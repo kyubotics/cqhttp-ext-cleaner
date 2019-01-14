@@ -8,7 +8,6 @@ set(CMAKE_CXX_FLAGS "/MP ${CMAKE_CXX_FLAGS}")
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CQHTTP_PROJECT_DIR}/cmake/Modules/")
 
 include(cotire)
-include(UseStaticCRT)
 include(FindVcpkgIncludeDir)
 include(FixDebugLibraryLookup)
 
@@ -20,6 +19,8 @@ add_definitions(-DBOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE
                 -D_WIN32_WINNT=0x0501
                 -DWIN32_LEAN_AND_MEAN
                 -DNOMINMAX)
+
+include(FixLinkConflict)
 
 file(GLOB_RECURSE SOURCE_FILES src/*.cpp)
 set(LIB_NAME "Cleaner")
